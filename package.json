@@ -23,7 +23,8 @@
     "sass": "^1.77.8",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.12",
-    "use-react-router-breadcrumbs": "^4.0.1"
+    "use-react-router-breadcrumbs": "^4.0.1",
+    "vercel": "^35.2.3"
   },
   "devDependencies": {
     "@types/node": "^20",
