@@ -29,7 +29,6 @@ const page: FC = () => {
     dispatch(fetchAsyncGames(page));
   }, [page]);
 
-  // const pageHandler = (pageValue: any) => setPage(pageValue);
   const pageHandler = (pageValue: number) => setPage(pageValue);
 
   return (
