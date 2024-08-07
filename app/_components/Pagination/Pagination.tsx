@@ -21,7 +21,6 @@ const Pagination: FC<PaginationProps> = ({
   };
 
   const pagePrevHandler = () => {
-    console.log("is disabled");
     if (prevPage !== null) pageHandler(--currentPage);
   };
 

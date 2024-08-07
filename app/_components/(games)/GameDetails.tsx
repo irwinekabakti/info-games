@@ -25,8 +25,6 @@ const GameDetails = ({ gameData }: any) => {
     (publisher: any) => publisher.name
   );
 
-  console.log(gameData);
-
   return (
     <GameDetailsWrapper>
       <div className="details-title">
