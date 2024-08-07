@@ -41,7 +41,7 @@ const StoreItem: FC<StoreItemProps> = ({ storeItem }) => {
         </ul>
         {storeItem?.games && <p className="fw-7 text-white">Games: </p>}
         <ul className="card-games d-flex flex-wrap">
-          {storeItem?.games?.map((item: any) => {
+          {storeItem?.games?.map((item: any): any => {
             return (
               <li className="card-game" key={item.id}>
                 <Link href={`games/${item.id}`}>{item.name}</Link>

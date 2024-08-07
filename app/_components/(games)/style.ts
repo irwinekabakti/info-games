@@ -157,6 +157,42 @@ export const GameDetailsWrapper = styled.div`
     }
   }
 
+  @media (max-width: 576px) {
+    .react-tabs__tab-list {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .react-tabs__tab {
+      flex: 0 0 auto;
+    }
+
+    .list-group-item {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .item-left {
+      flex: 0 0 auto;
+      margin-right: 10px;
+    }
+
+    .item-right {
+      flex: 1 1 auto;
+      // text-align: right;
+    }
+
+    .item-icon {
+      display: none;
+    }
+  }
+
   .react-tabs {
     margin-top: 48px;
 

@@ -7,11 +7,11 @@ interface StoreListProps {
   stores: Store[];
 }
 
-const StoreList: FC<StoreListProps> = ({ stores }: any) => {
+const StoreList: FC<StoreListProps> = ({ stores }) => {
   return (
     <StoreListWrapper>
       <div className="store-list d-grid">
-        {stores?.map((item: any) => (
+        {stores?.map((item: any): any => (
           <StoreItem key={item.id} storeItem={item} />
         ))}
       </div>
