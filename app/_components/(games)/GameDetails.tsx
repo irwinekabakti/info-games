@@ -12,6 +12,7 @@ import "react-tabs/style/react-tabs.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import StoreItem from "../(stores)/StoreItem";
 import { GameDetailsWrapper } from "./style";
+import moment from "moment";
 
 const GameDetails = ({ gameData }: any) => {
   let platforms = gameData?.platforms?.map(
@@ -62,7 +63,7 @@ const GameDetails = ({ gameData }: any) => {
                 </span>
               </div>
               <span className="item-right item-value fw-4">
-                {gameData?.released}
+                {moment(gameData?.released).format("MMM, Do YYYY")}
               </span>
             </li>
 

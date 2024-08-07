@@ -10,6 +10,7 @@ import axios from "@/api/axios";
 import StarRating from "../StarRating/StarRating";
 import { GenreItemWrapper } from "./style";
 import { GameData } from "@/types/type";
+import moment from "moment";
 
 interface GameItem {
   id: number;
@@ -61,11 +62,15 @@ const GenreItem: FC<GenreItemProps> = ({ gameItem }) => {
           <div className="details-group">
             <div className="details-item d-flex align-items-center">
               <p className="details-item-name fw-6">Release Date:&nbsp;</p>
-              <p className="details-item-value">{gameData?.released}</p>
+              <p className="details-item-value">
+                {moment(gameData?.released).format("MMM, Do YYYY")}
+              </p>
             </div>
             <div className="details-item d-flex align-items-center">
               <p className="details-item-name fw-6">Updated:&nbsp;</p>
-              <p className="details-item-value">{gameData?.updated}</p>
+              <p className="details-item-value">
+                {moment(gameData?.updated).format("MMM, Do YYYY")}
+              </p>
             </div>
           </div>
           <Link
