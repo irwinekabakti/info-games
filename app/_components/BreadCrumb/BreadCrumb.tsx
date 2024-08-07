@@ -1,43 +1,6 @@
-// import { FC } from "react";
-// import Link from "next/link";
-// import { usePathname } from "next/navigation";
-// import { BreadcrumbWrapper } from "./style";
-
-// interface BreadcrumbProps {
-//   dataNameById: Record<string, string>;
-// }
-
-// const BreadCrumb: FC<BreadcrumbProps> = ({ dataNameById }) => {
-//   const pathname = usePathname();
-//   const pathSegments = pathname.split("/").filter(Boolean);
-
-//   return (
-//     <BreadcrumbWrapper>
-//       {pathSegments.map((segment, index) => {
-//         const href = `/${pathSegments.slice(0, index + 1).join("/")}`;
-//         const isLast = index === pathSegments.length - 1;
-
-//         let displayName = segment;
-//         if (isLast && dataNameById[segment]) {
-//           displayName = dataNameById[segment];
-//         }
-
-//         return (
-//           <Link className="breadcrumb-item" href={href} key={href}>
-//             {displayName}
-//           </Link>
-//         );
-//       })}
-//     </BreadcrumbWrapper>
-//   );
-// };
-
-// export default BreadCrumb;
-
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import styled from "styled-components";
 import { BreadcrumbWrapper } from "./style";
 
 interface BreadcrumbProps {
@@ -70,9 +33,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ dataNameById }) => {
           <Link href={crumb.href} className="breadcrumb-item">
             {crumb.label}
           </Link>
-          {index < breadcrumbs.length - 1 && (
-            <span className="separator">&gt;&gt;</span>
-          )}
+          {index < breadcrumbs.length - 1}
         </React.Fragment>
       ))}
     </BreadcrumbWrapper>

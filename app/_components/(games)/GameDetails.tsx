@@ -10,8 +10,8 @@ import { FaGlobe } from "react-icons/fa";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { GameDetailsWrapper } from "./style";
 import StoreItem from "../(stores)/StoreItem";
+import { GameDetailsWrapper } from "./style";
 
 const GameDetails = ({ gameData }: any) => {
   let platforms = gameData?.platforms?.map(
@@ -77,7 +77,7 @@ const GameDetails = ({ gameData }: any) => {
                   platforms :
                 </span>
               </div>
-              <span className="item-right item-value fw-4">
+              <span className="item-right item-value fw-">
                 {platforms?.join(", ")}
               </span>
             </li>
