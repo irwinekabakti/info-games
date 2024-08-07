@@ -3,7 +3,7 @@ import axios from "../../api/axios";
 import { apiURL } from "@/constant";
 import { API_KEY } from "../../api/api_key";
 
-export const fetchAsyncGames = createAsyncThunk<any, number>(
+export const fetchAsyncGames = createAsyncThunk<any, number | undefined>(
   "games/fetch",
   async (page = 1) => {
     const { data } = await axios.get<any>(
