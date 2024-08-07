@@ -5,6 +5,7 @@ import { BsStar } from "react-icons/bs";
 import { GameItemWrapper } from "./style";
 import Image from "next/image";
 import { GameData } from "@/types/type";
+import moment from "moment";
 
 interface GameItemProps {
   gameItem: GameData;
@@ -38,11 +39,15 @@ const GameItem: FC<GameItemProps> = ({ gameItem }) => {
           <div className="details-group">
             <div className="details-item d-flex align-items-center">
               <p className="details-item-name fw-6">Release Date:&nbsp;</p>
-              <p className="details-item-value">{gameItem?.released}</p>
+              <p className="details-item-value">
+                {moment(gameItem?.released).format("MMM, Do YYYY")}
+              </p>
             </div>
             <div className="details-item d-flex align-items-center">
               <p className="details-item-name fw-6">Updated:&nbsp;</p>
-              <p className="details-item-value">{gameItem?.updated}</p>
+              <p className="details-item-value">
+                {moment(gameItem?.updated).format("MMM, Do YYYY")}
+              </p>
             </div>
           </div>
           <Link
